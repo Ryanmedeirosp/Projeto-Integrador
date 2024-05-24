@@ -1,0 +1,53 @@
+#planoDeFundo{
+    margin: 20px;
+    opacity: 0.2;
+    width: 1400px;
+    height: 500px;
+    z-index: 0;
+}
+#divPlanoDeFundo{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+p{
+    width: 500px;
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+}
+#divTexto{
+    position: relative;
+    left: 170px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -450px;
+}
+#divBotaoMain{
+    position: relative;
+    left: 180px;
+}
+#botaoMain{
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    background-color: #Fbf236;
+    border: none;
+    border-radius: 30px;
+    margin: 10px;
+    font-size: 17px;
+}
+#botaoMain:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+h1{
+   
+   margin-bottom: 10px;
+    font-size: 30px;
+    color: white;
+}
