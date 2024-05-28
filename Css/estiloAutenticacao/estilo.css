@@ -14,7 +14,8 @@ footer{
     width: 100%;
     background-color: #E5E7D5;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -200px;
+    bottom: -600px;
 }
