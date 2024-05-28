@@ -4,43 +4,7 @@
     font-size: 20px;
     width: 500px;
 }
-#textoMain{
-    top: 10px;
-    left: 100px;
-    position: absolute;
-}
-#segundoTexto{
-    position: absolute;
-    left: 50px;
-}
-#primeiroMain{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 400px;
-    left: 100px;
-    top: 200px;
-}
-#divBotaoMain{
-    top: 280px;
-    left: 250px;
-    position: absolute;
-    display: flex;
-    justify-content: end;
-}
-#tituloMain{
-    position: absolute;
-    top: -50px;
-    left: 1px;
-    width: 800px;
-}
-#segundaTitulo{
-    top: -70px;
-    position: absolute;
-    left: 1px;
-    width: 600px;
-}
+
 .titulo{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 35px;
@@ -60,37 +24,30 @@
     opacity: 0.7;
 }
 .imagemMain{
-   
     border-radius: 10px;
     width: 300px;
     height: 400px;
    
 }
-#divImagem{
-    top: 150px;
-    position: absolute;
-    left: 950px;
+.container{
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#segundaImagem{
-    top: 650px;
-    position: absolute;
-    left: 200px;
-
-}
-#segundoMain{
-   
+.estruraMain{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 400px;
-    left: 600px;
-    position: absolute;
-    top:  700px;
+    margin: 50px;
 }
-#segundoBotao{
-    top: 270px;
-    left: 200px;
-    position: absolute;
-    display: flex;
-    
+.divTitulo{
+    height: 60px;
+}
+.divBotao{
+   margin-top: 30px;
 }

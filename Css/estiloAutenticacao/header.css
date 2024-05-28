@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position:sticky;
-    left: 100px;
 }
 .logoPorco{
     width: 80px;

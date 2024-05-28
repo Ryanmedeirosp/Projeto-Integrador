@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+header{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color:  #b6b6a7;
+}
+main{
+    background-color:  #E5E7D5;
+}

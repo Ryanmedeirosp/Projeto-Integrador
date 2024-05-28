@@ -4,18 +4,20 @@
    
 }
 header{
-    background-color: #E5E7D5;
+  
     display: flex;
     align-items: center;
-    
+    justify-content: center;
 }
-
 footer{
     width: 100%;
-    background-color: #E5E7D5;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: -600px;
+}
+body{
+    background-color:  #b6b6a7;
+}
+main{
+    background-color:  #E5E7D5;
 }
