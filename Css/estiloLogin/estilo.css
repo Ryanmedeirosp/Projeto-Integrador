@@ -16,8 +16,12 @@ footer{
     align-items: center;
 }
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color:  #b6b6a7;
 }
 main{
     background-color:  #E5E7D5;
+    flex: 1;
 }
