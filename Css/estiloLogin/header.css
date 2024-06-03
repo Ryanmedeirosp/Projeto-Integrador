@@ -16,6 +16,7 @@
     width: 200px;
 }
 .botaoHeader{
+    padding: 0;
     width: 150px;
     height: 30px;
     font-size: 15px;
