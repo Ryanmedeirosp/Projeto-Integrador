@@ -25,6 +25,6 @@ main{
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color:  #E5E7D5;
+    background-color:  white;
     flex: 1;
 }
