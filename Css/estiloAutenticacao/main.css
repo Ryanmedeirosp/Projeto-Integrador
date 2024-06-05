@@ -1,15 +1,16 @@
-.texto{
+.texto {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     font-size: 20px;
     width: 500px;
 }
 
-.titulo{
+.titulo {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
 }
-.botaoMain{
+
+.botaoMain {
     width: 200px;
     height: 30px;
     font-size: 20px;
@@ -19,18 +20,19 @@
     background-color: black;
     border-radius: 5px;
 }
-.botaoMain:hover{
+
+.botaoMain:hover {
     cursor: pointer;
     opacity: 0.7;
 }
-.imagemMain{
+
+.imagemMain {
     border-radius: 10px;
     width: 300px;
     height: 400px;
-   
 }
-.container{
-    
+
+.container {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
@@ -38,16 +40,19 @@
     justify-content: center;
     align-items: center;
 }
-.estruraMain{
+
+.estruraMain {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 50px;
 }
-.divTitulo{
+
+.divTitulo {
     height: 60px;
 }
-.divBotao{
+
+.divBotao {
    margin-top: 30px;
 }

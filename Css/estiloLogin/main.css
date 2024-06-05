@@ -1,14 +1,16 @@
-#container{
+#container {
     width: 50%;
     display: flex;
     justify-content: left;
     flex-direction: column;
 }
-h1{
+
+h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
 }
-input{
+
+input {
     padding: 10px;
     border-radius: 10px;
     border: none;
@@ -18,12 +20,14 @@ input{
     height: 40px;
     margin-bottom: 15px;
 }
-#divBotaoConta{
+
+#divBotaoConta {
     width: 420px;
     display: flex;
     justify-content: end;
 }
-button{
+
+button {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -32,7 +36,8 @@ button{
     border: none;
     border-radius: 10px;
 }
-button:hover{
+
+button:hover { 
     opacity: 0.8;
     cursor: pointer;
 }
@@ -43,8 +48,7 @@ button:hover{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-#aMain{
+#aMain {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-weight: bold;
