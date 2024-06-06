@@ -1,0 +1,64 @@
+#texto1 {
+    height: 110px;
+}
+
+#texto2 {
+    height: 80px;
+}
+
+#caixasInformacao {
+    height: 460px;
+}
+
+.title {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+    width: 600px;
+    height: 25px;
+    border-radius: 5px ;
+    padding: 10px;
+    background-color: #D9D9D9;
+    border: none;
+}
+
+.text {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+.button {
+    display: block;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 50px;  
+    background-color: #D9D9D9;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#p1 {
+    width: 620px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#p2 {
+    width: 620px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}

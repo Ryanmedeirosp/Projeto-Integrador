@@ -1,11 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte</title>
+    <link rel="stylesheet" href="../Css/estiloCadastro/estilo.css">
+    <link rel="stylesheet" href="../Css/estiloCadastro/footer.css">
+    <link rel="stylesheet" href="../Css/estiloCadastro/header.css">
+    <link rel="stylesheet" href="../Css/estiloCadastro/main.css">
+    <script src="../JavaScript/scriptCadastro/script.js" defer></script>
+    <title>RD Investimento</title>
 </head>
 <body>
+    <header>
+
+        <div id="divLogo">
+            <img class="logoPorco" src="../imagens/logoPorco.png" alt="Porco">
+            <img id="nomePreto" src="../imagens/nomePreto.png" alt="Nome">
+        </div>
+
+        <div id="containerBotao">
+
+            <div class="divBotao">
+                <a href="cadastro.html"><button class="botaoHeader">CADASTRO</button></a>
+            </div>
+
+            <div class="divBotao">
+               <a href="autenticacao.html"><button class="botaoHeader">VOLTAR</button></a> 
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="title">
+            <h1 class="title">Bem-vindo à RD Investimento!</h1>
+        </div>
+
+        <div id="texto1">
+            <p id="p2">Você já imaginou como seria a sua vida com mais liberdade financeira? Chegou a hora de transformar essa visão em realidade. Nosso site de investimentos é a chave para abrir um mundo de oportunidades e crescimento pessoal. <br> Cadastre-se agora e dê o primeiro passo rumo à independência financeira. Junte-se a investidores que já estão transformando suas vidas e alcançando seus sonhos.</p>
+        </div>  
+
+        
+        <div id="caixasInformacao">
+
+            <div class="MultBox" id="MultBox1">
+                <h2 class="text" id="text1">Nome completo:</h2>
+                <input type="text" name="nome" class="box"  id="Box1" required>
+                <span role="alert" class="feedback error"></span>
+            </div>
     
+            <div class="MultBox" id="MultBox2">
+                <h3 class="text" id="text2">RG/CPF:</h3>
+                <input type="text" name="rg_cpf" class="box" id="Box2" required>
+                <span role="alert" class="feedback error"></span>
+            </div>
+    
+            <div class="MultBox" id="MultBox3">
+                <h4 class="text" id="text3">Data de Nascimento (dd/mm/aaaa):</h4>
+                <input type="text" name="data_nascimento" class="box" id="Box3"required>
+                <span role="alert" class="feedback error"></span>
+            </div>
+    
+            <div class="MultBox" id="MultBox4">
+                <h5 class="text" id="text4">Email:</h5>
+                <input type="email" name="email" class="box" id="Box4"required>
+                <span role="alert" class="feedback error"></span>
+            </div>
+    
+            <div class="MultBox" id="MultBox5">
+                <h5 class="text" id="text5">Telefone:</h5>
+                <input type="tel" name="telefone" class="box" id="Box5" required>
+                <span role="alert" class="feedback error"></span>
+            </div>
+    
+            <div class="MultBox" id="MultBox6">
+                <h6 class="text" id="text6">Senha:</h6>
+                <input type="password" name="senha" class="box" id="Box6" required>
+                <span role="alert" class="feedback error"></span>
+            </div>
+    
+            <div class="MultBox" id="MultBox7">
+                <h6 class="text" id="text7">Confirmar Senha:</h6>
+                <input type="password" name="confirmar_senha" class="box" id="Box7"required>
+                <span role="alert" class="feedback error"></span>
+            </div>
+
+        </div>      
+
+        <div id="texto2">
+            <p id="p1">Ao clicar em "Enviar informações" você autoriza a RD Investimentos a coletar seus dados pessoais de acordo com a nossa Política de Privacidade com o objetivo de comunicar informações sobre o processo de abertura da sua conta. Caso queira, você pode ajustar quais notificações e avisos deseja receber.</p>
+        </div>
+
+        <div id="botaoEnviar">
+            <a href="póscadastro.html"><button class="button">Enviar informações</button></a>
+        </div>
+
+    </main> 
+
+    <footer>
+
+        <div id="divLogoFooter">
+            <img class="logoPorco" src="../imagens/logoPorco.png" alt="Porco">
+        </div>
+
+        <div class="rodape">
+            <a class="aRodape" href="">Suporte</a>
+            <a class="aRodape" href="">Entre em Contato</a>
+            <a class="aRodape" href="">Polítca de Privacidade</a>
+        </div>
+
+        <div  class="rodape">
+            <p class="textoRodape">Horário: 8hrs - 18hrs</p>
+            <p class="textoRodape">Telefone: (11) 98874-6969</p>
+            <p class="textoRodape">Email: rdinvestimentos@gmail.com</p>
+        </div>
+
+        <div  class="rodape">
+            <p class="textoRodape">Local: Faria Lima, 108</p>
+            <p class="textoRodape">São Paulo - Brasil</p>
+        </div>
+
+        <div id="divRedeSocial">
+            <img class="imagemFooter" src="../imagens/facebook.png" alt="facebook">
+            <img class="imagemFooter" src="../imagens/instagram.png" alt="instagram">
+            <img class="imagemFooter" src="../imagens/twitter.png" alt="twitter">
+            <img class="imagemFooter" src="../imagens/whatsapp.png" alt="whatsapp">
+            <img class="imagemFooter" src="../imagens/youtube.png" alt="youtube">
+        </div>
+
+    </footer>
+
 </body>
 </html>
