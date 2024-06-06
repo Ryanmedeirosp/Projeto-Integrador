@@ -9,15 +9,7 @@
     height: 400px;
 }
 
-#container h1 {
-    position: relative;
-    bottom: 20px;
-}
 
-#container a {
-    position: relative;
-    top: 20px;
-}
 
 #campoEmail {
     display: flex;
@@ -28,8 +20,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: left;
-    position: relative;
-    top: 10px;
+    
 }
 
 h1 {
