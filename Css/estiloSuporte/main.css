@@ -18,11 +18,11 @@
     display: flex;
 }
 
-input {
-    padding: 10px;
+select {
+   
     border-radius: 10px;
     border: none;
-    width: 1060px;
+    width: 1080px;
     background-color:#d4d3d3 ;
     height: 20px;
 }

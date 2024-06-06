@@ -7,6 +7,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:  #b6b6a7;
 }
 
 footer {
@@ -14,16 +15,15 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:  #b6b6a7;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color:  #b6b6a7;
 }
 
 main {
-    background-color:  white;
     flex: 1;
 }
