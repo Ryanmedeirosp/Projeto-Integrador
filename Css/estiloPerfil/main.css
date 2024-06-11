@@ -1,0 +1,19 @@
+#containerAcoes{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 50%;
+    height: 350px;
+    overflow: auto;
+    justify-content: center;
+}
+#resto{
+    width: 50%;
+}
+.divAcao{
+    width: 50%;
+    justify-content: space-between;
+}
+#containerAcoes h1{
+    margin-bottom: 25px;
+}
