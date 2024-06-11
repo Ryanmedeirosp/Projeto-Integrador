@@ -5,7 +5,7 @@
 
 header {
     display: flex;
-    align-items: center;
+   
     justify-content: center;
     background-color:  #b6b6a7;
 }
@@ -26,4 +26,14 @@ body {
 
 main {
     flex: 1;
+}
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
 }
