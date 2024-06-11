@@ -9,29 +9,29 @@
     height: 80px;
 }
 
-nav{
+nav {
     position: absolute;
     right: 100px;
 }
-nav a{
-    padding: 15px;
+nav a {
+    padding: 35px;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: large;
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     text-decoration: underline;
     opacity: 0.8;
 }
-#perfil{
+#perfil {
     position: absolute;
-    right: 160px;
+    right: 180px;
     width: 20px;
     height: 20px;
 }
-#perfil:hover{
+#perfil:hover {
     opacity: 0.8;
     cursor: pointer;
 }

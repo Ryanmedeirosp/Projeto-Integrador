@@ -1,4 +1,4 @@
-#containerAcoes{
+#containerAcoes {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -7,13 +7,16 @@
     overflow: auto;
     justify-content: center;
 }
-#resto{
+
+#resto {
     width: 50%;
 }
-.divAcao{
+
+.divAcao {
     width: 50%;
     justify-content: space-between;
 }
-#containerAcoes h1{
+
+#containerAcoes h1 {
     margin-bottom: 25px;
 }
