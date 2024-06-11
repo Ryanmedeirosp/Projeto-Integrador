@@ -1,31 +1,27 @@
 #containerGeral {
-    border: solid;
+ 
     width: 1200px;
 }
 #tiposAcoes {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    border: solid;
+
     width: 600px;
     margin-top: 30px;
 }
 
-#containerMelhoresAcoes {
+.container{
     width: 600px;
 }
 
-#containerMelhoresBDRs {
-    width: 600px;
-}
-
-#titulo {
+.titulo {
     text-align: center;
     background-color: black;
     color: white;  
 }
 
-#containerAcoes {
+#containerAcoes,#containerBDRs , #containerFund {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -37,25 +33,15 @@
 
 .divAcao {
     width: 50%;
-    justify-content: space-between;
+   
 }
 
 #containerAcoes h1 {
     margin-bottom: 25px;
 }
 
-#titulo2 {
-    text-align: center;
-    background-color: black;
-    color: white; 
+#containerBDRs h1 {
+    margin-bottom: 25px;
 }
 
-#containerBDRs {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    padding-left: 80px;
-    height: 305px;
-    overflow: auto;
-    background-color:#DCDCDC;
-}
+

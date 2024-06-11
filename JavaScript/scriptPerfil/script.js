@@ -1,6 +1,6 @@
 const containerAcoes = document.querySelector("#containerAcoes")
 const containerBDRs = document.querySelector("#containerBDRs")
-
+const containerFund = document.querySelector("#containerFund")
 window.onload = ()=>{
     buscarDados()
 }
@@ -38,18 +38,18 @@ function buscarDados(){
         }
     }
 
-    let url2 = "https://brapi.dev/api/quote/list?limit=100&type=bdr&token=jCwqXxVNK97bbGxSXjfm8v";
-    let request2 = new XMLHttpRequest();
-    request2.open("GET", url2);
-    request2.send();
-    request2.onload = () => {
-        let resposta2 = request2.response;
-        resposta2 = JSON.parse(resposta2)
-        console.log(resposta2.stocks);
+    let urlBDR = "https://brapi.dev/api/quote/list?limit=100&type=bdr&token=jCwqXxVNK97bbGxSXjfm8v";
+    let requestbdr = new XMLHttpRequest();
+    requestbdr.open("GET", urlBDR);
+    requestbdr.send();
+    requestbdr.onload = () => { 
+        let respostabdr = requestbdr.response;
+        respostabdr = JSON.parse(respostabdr)
+        console.log(respostabdr.stocks);
         
-        for (let index = 0; index < resposta2.stocks.length; index++) {
+        for (let index = 0; index < respostabdr.stocks.length; index++) {
            
-           if (resposta2.stocks[index].logo !== "https://brapi.dev/favicon.svg") {
+           if (respostabdr.stocks[index].logo !== "https://brapi.dev/favicon.svg") {
 
            let divImgAcao = document.createElement('div')
            let divAcao = document.createElement('div')
@@ -62,16 +62,51 @@ function buscarDados(){
            
            
            divAcao.className = "divAcao"
-           imgAcao.src = resposta2.stocks[index].logo
-           nameAcao.textContent = resposta2.stocks[index].name
-           console.log(resposta2.stocks[index])
+           imgAcao.src = respostabdr.stocks[index].logo
+           nameAcao.textContent = respostabdr.stocks[index].name
+           console.log(respostabdr.stocks[index])
 
         }
            
            
                  
         }
-
- 
+        
     }
+    let urlfund = "https://brapi.dev/api/quote/list?limit=100&type=fund&token=jCwqXxVNK97bbGxSXjfm8v";
+    let fund = new XMLHttpRequest();
+    fund.open("GET", urlfund);
+    fund.send();
+    fund.onload = () => { 
+        let respostafund = fund.response;
+        respostafund = JSON.parse(respostafund)
+        console.log(respostafund.stocks);
+        
+        for (let index = 0; index < respostafund.stocks.length; index++) {
+           
+           if (respostafund.stocks[index].logo !== "https://brapi.dev/favicon.svg") {
+
+           let divImgAcao = document.createElement('div')
+           let divAcao = document.createElement('div')
+           let imgAcao = document.createElement('img') 
+           let nameAcao = document.createElement('p')
+           containerFund.appendChild(divAcao)
+           divAcao.appendChild(divImgAcao)
+           divImgAcao.appendChild(nameAcao)
+           divImgAcao.appendChild(imgAcao)
+           
+           
+           divAcao.className = "divAcao"
+           imgAcao.src = respostafund.stocks[index].logo
+           nameAcao.textContent = respostafund.stocks[index].name
+           console.log(respostafund.stocks[index])
+
+        }
+           
+           
+                 
+        }
+        
+    }
+
 }
