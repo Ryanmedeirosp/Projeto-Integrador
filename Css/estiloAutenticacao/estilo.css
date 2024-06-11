@@ -1,13 +1,13 @@
 * {
     margin: 0;
-    padding: 0;   
+    padding: 0;
 }
 
 header {
     display: flex;
    
     justify-content: center;
-    background-color:  #b6b6a7;
+    background-color: #FCA313;
 }
 
 footer {
@@ -15,7 +15,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #b6b6a7;
+    background-color: #FCA313;
 }
 
 body {
