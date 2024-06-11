@@ -1,8 +1,16 @@
+#containerGeral {
+    width: 50%;
+}
+
+#titulo {
+    text-align: center;   
+}
+
 #containerAcoes {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    width: 50%;
+    
     height: 350px;
     overflow: auto;
     justify-content: center;
