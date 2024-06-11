@@ -19,12 +19,11 @@ footer {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 1500px;
     background-color:  #b6b6a7;
 }
 
 main {
-    align-items: center;
     display: flex;
     justify-content: center;
     background-color:  white;

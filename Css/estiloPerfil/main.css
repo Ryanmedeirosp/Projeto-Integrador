@@ -1,23 +1,38 @@
 #containerGeral {
-    width: 50%;
+    border: solid;
+    width: 1200px;
+}
+#tiposAcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border: solid;
+    width: 600px;
+    margin-top: 30px;
+}
+
+#containerMelhoresAcoes {
+    width: 600px;
+}
+
+#containerMelhoresBDRs {
+    width: 600px;
 }
 
 #titulo {
-    text-align: center;   
+    text-align: center;
+    background-color: black;
+    color: white;  
 }
 
 #containerAcoes {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    
-    height: 350px;
+    padding-left: 80px;
+    height: 305px;
     overflow: auto;
-    justify-content: center;
-}
-
-#resto {
-    width: 50%;
+    background-color:#DCDCDC;
 }
 
 .divAcao {
@@ -27,4 +42,20 @@
 
 #containerAcoes h1 {
     margin-bottom: 25px;
+}
+
+#titulo2 {
+    text-align: center;
+    background-color: black;
+    color: white; 
+}
+
+#containerBDRs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding-left: 80px;
+    height: 305px;
+    overflow: auto;
+    background-color:#DCDCDC;
 }
