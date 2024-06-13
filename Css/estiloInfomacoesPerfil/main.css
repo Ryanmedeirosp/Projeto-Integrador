@@ -1,0 +1,116 @@
+#main{
+    gap: 10px;
+}
+
+.Img{
+    width: 200px;
+}
+
+#h1{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#ContainerFotoNome{
+    background-color: #D9D9D9;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 600px;
+    height: 40px;
+    border-radius: 3px ;
+    background-color: white;
+    border: none;
+}
+
+#containerInformacoesConta{
+    width: 650px;
+    height: 500px;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+.text{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box{
+    width: 230px;
+    height: 40px;
+    padding: 5px;
+}
+
+#Box1{
+    width: 475px;
+}
+
+#containerNomeInfo{
+    margin-top: 0px;
+}
+
+#containerTelefoneEmailInfo{
+    gap: 10px;
+    display: flex;
+}
+
+#containerCpfDatInfo {
+    gap: 10px;
+    display: flex;
+}
+
+#botaoEditar {
+    margin-top: 30px;
+    margin-left: 390px;
+    height: 60px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#botaoEditar button {
+    font-size: medium;
+    height: 43px;
+    width: 90px;
+    padding: 10px;
+    background-color: white;
+}
+
+#botaoEditar button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#botoesCancelarSalvar {
+    margin-top: 10px;
+    width: 400px;
+    height: 60px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#botoesCancelarSalvar button {
+    font-size: large;
+    height: 43px;
+    width: 120px;
+    padding: 10px;
+    background-color: white;
+}
+
+#botoesCancelarSalvar button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #FCA313;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCA313;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    background-color:  white;
+    flex: 1;
+}
+
+::placeholder {
+    font-size: small;
+}
+
+::-webkit-datetime-edit { margin-left: 30px; }
+::-webkit-datetime-edit-text { color: red; padding: 0 0.8em; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { margin-right: 20px; }
