@@ -36,7 +36,18 @@ main {
     font-size: small;
 }
 
-::-webkit-datetime-edit { margin-left: 30px; }
-::-webkit-datetime-edit-text { color: red; padding: 0 0.8em; }
-::-webkit-inner-spin-button { display: none; }
-::-webkit-calendar-picker-indicator { margin-right: 20px; }
+::-webkit-datetime-edit { 
+    margin-left: 30px; 
+}
+
+::-webkit-datetime-edit-text { 
+    color: red; padding: 0 0.8em; 
+}
+
+::-webkit-inner-spin-button {
+    display: none; 
+}
+
+::-webkit-calendar-picker-indicator {
+    margin-right: 20px; 
+}

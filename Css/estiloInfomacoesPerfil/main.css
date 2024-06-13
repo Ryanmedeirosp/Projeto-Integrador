@@ -1,18 +1,17 @@
-#main{
+#main {
     gap: 10px;
 }
 
-.Img{
+.Img {
     width: 200px;
 }
 
-#h1{
+#h1 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-#ContainerFotoNome{
+#ContainerFotoNome {
     background-color: #D9D9D9;
     width: 350px;
     height: 350px;
@@ -30,7 +29,7 @@
     border: none;
 }
 
-#containerInformacoesConta{
+#containerInformacoesConta {
     width: 650px;
     height: 500px;
     background-color: #D9D9D9;
@@ -40,26 +39,26 @@
     gap: 20px
 }
 
-.text{
+.text {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.box{
+.box {
     width: 230px;
     height: 40px;
     padding: 5px;
 }
 
-#Box1{
+#Box1 {
     width: 475px;
 }
 
-#containerNomeInfo{
+#containerNomeInfo {
     margin-top: 0px;
 }
 
-#containerTelefoneEmailInfo{
+#containerTelefoneEmailInfo {
     gap: 10px;
     display: flex;
 }
