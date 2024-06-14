@@ -74,7 +74,7 @@ function buscarDados(){
         }
         
     }
-    let urlfund = "https://brapi.dev/api/quote/list?limit=100&type=fund&token=jCwqXxVNK97bbGxSXjfm8v";
+    let urlfund = "https://brapi.dev/api/quote/list?&limit=100&type=fund&token=jCwqXxVNK97bbGxSXjfm8v";
     let fund = new XMLHttpRequest();
     fund.open("GET", urlfund);
     fund.send();
