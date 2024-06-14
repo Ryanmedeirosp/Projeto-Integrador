@@ -1,11 +1,40 @@
 const areaDivsApi = document.querySelector("#areaDivsApi")
+const fundos = document.querySelector("#fundos")
+const bdrs = document.querySelector("#bdrs")
+const acoes = document.querySelector("#acoes")
+const container = document.querySelector("#container")
+
+var informacao = "type=stock"
 
 window.onload = ()=>{
     buscarDados()
 }
 
+fundos.addEventListener("click",(e)=>{
+    informacao = "type=fund"
+    areaDivsApi.textContent = ""
+    container.style.background ="#979696"
+    buscarDados()
+})
+
+
+bdrs.addEventListener("click",(e)=>{
+    informacao = "type=bdr"
+    container.style.background ="#BABABA"
+    areaDivsApi.textContent = ""
+    buscarDados()
+})
+
+acoes.addEventListener("click",(e)=>{
+    informacao = "type=stock"
+    container.style.background ="#D9D9D9"
+    areaDivsApi.textContent = ""
+    buscarDados()
+})
+
+
 function buscarDados(){
-    let url = "https://brapi.dev/api/quote/list?limit=100&token=jCwqXxVNK97bbGxSXjfm8v";
+    let url = "https://brapi.dev/api/quote/list?" + informacao + "&limit=100&token=jCwqXxVNK97bbGxSXjfm8v";
     let request = new XMLHttpRequest();
     request.open("GET", url);
     request.send();
