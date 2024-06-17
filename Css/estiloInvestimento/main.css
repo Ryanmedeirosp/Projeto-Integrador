@@ -83,10 +83,14 @@
     width: 330px;
     text-align: center;
 }
-.nomeAcao, .menuAcao{
+.nomeAcao{
     text-align: center;
     width: 200px;
+}
 
+.menuAcao {
+    text-align: left;
+    width: 190px;
 }
 
 #tiposInformacoes {
@@ -98,7 +102,6 @@
 }
 
 #areaDivsApi {
-    
     overflow: auto;
     height: 345px;
     width: 1000px;

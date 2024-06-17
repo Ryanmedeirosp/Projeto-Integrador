@@ -1,0 +1,88 @@
+#containerGeral {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+#tiposAcoes {
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    margin-top: 30px;
+   
+}
+
+.container{
+    background-color: rgb(160, 159, 159);
+   border-radius: 30px;
+    width: 400px;
+    height: 450px;
+}
+
+.titulo {
+    
+    text-align: center;
+    
+    color: black;  
+}
+
+#containerAcoes, #containerBDRs, #containerFund {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 350px;
+    overflow: auto;
+    color: black;
+    
+}
+
+.divAcao {
+   margin: 30px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+#containerAcoes h1 {
+    margin-bottom: 25px;
+}
+
+#containerBDRs h1 {
+    margin-bottom: 25px;
+}
+
+#containerInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.videosYOUTUBE {
+
+    display: flex;
+    gap: 40px;
+    width: 1280px;
+    align-items: center;
+}
+
+.video {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.divImgAcao {
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    width: 120px;
+}
+
+.nameAcao{
+    word-break:break-all;
+    margin-top: 10px;
+    font-weight: bold;
+ 
+}

@@ -67,7 +67,6 @@ function buscarDados(){
            divImgAcao.appendChild(setorAcao)
            divImgAcao.appendChild(rentabilidadeAcao)
            divImgAcao.appendChild(precoAcao)
-           divImgAcao.appendChild(botao)
            
 
            nameAcao.className = "nomeAcao"
