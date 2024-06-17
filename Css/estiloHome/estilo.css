@@ -20,16 +20,18 @@ footer {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 1350px;
+    min-height: 1500px;
 }
 
 main {
+    
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     flex: 1;
 }
 ::-webkit-scrollbar-track {
-    background-color: grey;
+    background-color: rgb(160, 159, 159);
 }
 ::-webkit-scrollbar {
     width: 6px;

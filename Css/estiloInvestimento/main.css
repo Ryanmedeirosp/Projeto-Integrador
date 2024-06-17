@@ -118,7 +118,7 @@
 }
 
 .divAcao {
-    border: solid;
+    border-bottom: solid;
     height: 150px;
     width: 970px;
 }
