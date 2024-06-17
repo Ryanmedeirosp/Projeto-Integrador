@@ -26,11 +26,13 @@ function buscarDados(){
            let nameAcao = document.createElement('p')
            containerAcoes.appendChild(divAcao)
            divAcao.appendChild(divImgAcao)
-           divImgAcao.appendChild(nameAcao)
            divImgAcao.appendChild(imgAcao)
+           divImgAcao.appendChild(nameAcao)
+           
            
            
            divAcao.className = "divAcao"
+           divImgAcao.className = "divImgAcao"
            imgAcao.src = resposta.stocks[index].logo
            nameAcao.textContent = resposta.stocks[index].name
            console.log(resposta.stocks[index])
@@ -58,11 +60,13 @@ function buscarDados(){
            let nameAcao = document.createElement('p')
            containerBDRs.appendChild(divAcao)
            divAcao.appendChild(divImgAcao)
-           divImgAcao.appendChild(nameAcao)
            divImgAcao.appendChild(imgAcao)
+           divImgAcao.appendChild(nameAcao)
+           
            
            
            divAcao.className = "divAcao"
+           divImgAcao.className = "divImgAcao"
            imgAcao.src = respostabdr.stocks[index].logo
            nameAcao.textContent = respostabdr.stocks[index].name
            console.log(respostabdr.stocks[index])
@@ -93,11 +97,13 @@ function buscarDados(){
            let nameAcao = document.createElement('p')
            containerFund.appendChild(divAcao)
            divAcao.appendChild(divImgAcao)
-           divImgAcao.appendChild(nameAcao)
            divImgAcao.appendChild(imgAcao)
+           divImgAcao.appendChild(nameAcao)
+           
            
            
            divAcao.className = "divAcao"
+           divImgAcao.className = "divImgAcao"
            imgAcao.src = respostafund.stocks[index].logo
            nameAcao.textContent = respostafund.stocks[index].name
            console.log(respostafund.stocks[index])

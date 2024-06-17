@@ -20,7 +20,7 @@ footer {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 1500px;
+    min-height: 1350px;
 }
 
 main {
@@ -29,12 +29,12 @@ main {
     flex: 1;
 }
 ::-webkit-scrollbar-track {
-    background-color: #F4F4F4;
+    background-color: grey;
 }
 ::-webkit-scrollbar {
     width: 6px;
-    background: #F4F4F4;
+    background: white;
 }
 ::-webkit-scrollbar-thumb {
-    background: #dad7d7;
+    background: black;
 }
