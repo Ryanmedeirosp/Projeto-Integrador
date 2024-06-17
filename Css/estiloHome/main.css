@@ -6,35 +6,43 @@
     align-items: center;
 }
 #tiposAcoes {
+    justify-content: center;
     display: flex;
     gap: 50px;
-    width: 1400px;
+    width: 100%;
     margin-top: 30px;
+   
 }
 
 .container{
-    width: 600px;
+    background-color: rgb(160, 159, 159);
+   border-radius: 30px;
+    width: 400px;
+    height: 450px;
 }
 
 .titulo {
+    
     text-align: center;
-    background-color: black;
-    color: white;  
+    
+    color: black;  
 }
 
 #containerAcoes, #containerBDRs, #containerFund {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 10px;
-    padding-left: 80px;
-    height: 305px;
+    height: 350px;
     overflow: auto;
-    background-image: linear-gradient(black, grey);
-    color: white;
+    color: black;
+    
 }
 
 .divAcao {
-    width: 50%;
+   margin: 30px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
 }
 
 #containerAcoes h1 {
@@ -51,6 +59,7 @@
 }
 
 .videosYOUTUBE {
+
     display: flex;
     gap: 40px;
     width: 1280px;
@@ -65,8 +74,15 @@
 }
 
 .divImgAcao {
-   text-align: center;
-   width: 150px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    width: 120px;
 }
 
-
+.nameAcao{
+    word-break:break-all;
+    margin-top: 10px;
+    font-weight: bold;
+ 
+}

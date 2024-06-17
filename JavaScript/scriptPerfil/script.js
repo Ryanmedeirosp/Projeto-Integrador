@@ -33,6 +33,8 @@ function buscarDados(){
            
            divAcao.className = "divAcao"
            divImgAcao.className = "divImgAcao"
+           
+           nameAcao.className = "nameAcao"
            imgAcao.src = resposta.stocks[index].logo
            nameAcao.textContent = resposta.stocks[index].name
            console.log(resposta.stocks[index])
@@ -67,6 +69,7 @@ function buscarDados(){
            
            divAcao.className = "divAcao"
            divImgAcao.className = "divImgAcao"
+           nameAcao.className = "nameAcao"
            imgAcao.src = respostabdr.stocks[index].logo
            nameAcao.textContent = respostabdr.stocks[index].name
            console.log(respostabdr.stocks[index])
@@ -104,6 +107,7 @@ function buscarDados(){
            
            divAcao.className = "divAcao"
            divImgAcao.className = "divImgAcao"
+           nameAcao.className = "nameAcao"
            imgAcao.src = respostafund.stocks[index].logo
            nameAcao.textContent = respostafund.stocks[index].name
            console.log(respostafund.stocks[index])
