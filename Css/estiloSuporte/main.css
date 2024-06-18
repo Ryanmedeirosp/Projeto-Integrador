@@ -1,5 +1,5 @@
 #container {
-    margin-top: 10px;
+   
     width: 1100px;
     display: flex;
     justify-content: left;
@@ -8,6 +8,7 @@
 
 #divAjustes {
     border-radius: 10px;
+    margin-top: 20px;
     width: 100%;
     background-color:#dfdddd;
     padding: 10px;
@@ -32,7 +33,7 @@ textarea {
     border-radius: 10px;
     background-color:#b8b8b8 ;
     resize:none;
-    height:130px ;
+    height:100px ;
     width:1060px ;
 }
 
