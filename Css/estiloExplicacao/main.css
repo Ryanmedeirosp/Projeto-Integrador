@@ -1,0 +1,42 @@
+#containerGeral {
+    height: 900px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+#divApresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#tituloApresentacao {
+    text-align: center;
+}
+
+#divAcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#divFundos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#divBDRS {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#divDiferencas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

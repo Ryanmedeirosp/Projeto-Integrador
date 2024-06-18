@@ -5,41 +5,78 @@
     gap: 40px;
     align-items: center;
 }
+
 #tiposAcoes {
     justify-content: center;
     display: flex;
     gap: 50px;
     width: 100%;
     margin-top: 30px;
-   
 }
 
 .container{
-    background-color: rgb(160, 159, 159);
-   border-radius: 30px;
+    background-color: #D9D9D9;
+    border-radius: 30px;
     width: 400px;
     height: 450px;
 }
 
 .titulo {
-    
     text-align: center;
-    
-    color: black;  
+    color: black;
+    margin-top: 10px;
 }
 
 #containerAcoes, #containerBDRs, #containerFund {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 350px;
+    height: 340px;
     overflow: auto;
     color: black;
-    
+}
+
+#containerAcoes::-webkit-scrollbar {
+    width: 6px;
+    background: white;
+}
+
+#containerAcoes::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+#containerAcoes::-webkit-scrollbar-track {
+    background-color: #D9D9D9;;
+}
+
+#containerBDRs::-webkit-scrollbar {
+    width: 6px;
+    background: white;
+}
+
+#containerBDRs::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+#containerBDRs::-webkit-scrollbar-track {
+    background-color: #D9D9D9;;
+}
+
+#containerFund::-webkit-scrollbar {
+    width: 6px;
+    background: white;
+}
+
+#containerFund::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+#containerFund::-webkit-scrollbar-track {
+    background-color: #D9D9D9;;
 }
 
 .divAcao {
-   margin: 30px;
+    margin: 30px;
     display: flex;
     justify-content: center;
     border-bottom: 2px solid black;
@@ -56,6 +93,11 @@
 #containerInfo {
     display: flex;
     justify-content: center;
+}
+
+#containerInfo a {
+    display: flex;
+    color: black;
 }
 
 .videosYOUTUBE {
@@ -80,7 +122,7 @@
     width: 120px;
 }
 
-.nameAcao{
+.nameAcao {
     word-break:break-all;
     margin-top: 10px;
     font-weight: bold;
