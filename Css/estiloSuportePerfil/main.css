@@ -1,5 +1,5 @@
 #container {
-    margin-top: 10px;
+    
     width: 1100px;
     display: flex;
     justify-content: left;
@@ -10,7 +10,7 @@
     border-radius: 10px;
     margin-top: 20px;
     width: 100%;
-    background-color:#aaaaaa ;
+    background-color:#dfdddd ;
     padding: 10px;
 }
 
@@ -23,7 +23,7 @@ select {
     border-radius: 10px;
     border: none;
     width: 1080px;
-    background-color:#d4d3d3 ;
+    background-color:#b8b8b8  ;
     height: 20px;
 }
 
@@ -31,7 +31,7 @@ textarea {
     border: none;
     padding: 10px;
     border-radius: 10px;
-    background-color:#d4d3d3 ;
+    background-color:#b8b8b8 ;
     resize:none;
     height:100px ;
     width:1060px ;
@@ -48,7 +48,7 @@ button {
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background-color:#D9D9D9 ;
+    background-color:#b8b8b8  ;
     border: none;
     border-radius: 10px;
 }

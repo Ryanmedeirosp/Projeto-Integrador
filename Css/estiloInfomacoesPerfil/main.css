@@ -32,7 +32,8 @@
 
 #containerInformacoesConta {
     border-radius: 10px;
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 650px;
     height: 500px;
     background-color: #D9D9D9;
@@ -122,4 +123,30 @@
 #botoesCancelarSalvar button:hover {
     cursor: pointer;
     opacity: 0.8;
+}
+
+#divSair{
+   
+    margin-bottom: 400px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+#divSair button{
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    height: 43px;
+    width: 100px;
+    padding: 10px;
+    background-color:red ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#divSair button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+
 }
