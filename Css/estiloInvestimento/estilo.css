@@ -35,12 +35,12 @@ main {
     flex: 1;
 }
 ::-webkit-scrollbar-track {
-    background-color: rgb(160, 159, 159);
+    background-color: #F4F4F4;
 }
 ::-webkit-scrollbar {
     width: 6px;
-    background: white;
+    background: #F4F4F4;
 }
 ::-webkit-scrollbar-thumb {
-    background: black;
+    background: #dad7d7;
 }

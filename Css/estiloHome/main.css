@@ -128,3 +128,7 @@
     font-weight: bold;
  
 }
+
+iframe{
+    border-radius: 10px;
+}
