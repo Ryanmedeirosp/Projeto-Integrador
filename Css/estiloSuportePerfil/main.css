@@ -19,12 +19,12 @@
 }
 
 select {
-   
+    padding: 5px;
     border-radius: 10px;
     border: none;
     width: 1080px;
     background-color:#b8b8b8  ;
-    height: 20px;
+    height: 30px;
 }
 
 textarea {

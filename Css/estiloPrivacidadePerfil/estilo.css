@@ -7,6 +7,8 @@ header {
     display: flex;
     align-items: center;
     background-color: #FCA313;
+    box-shadow: 1px 1px 10px black;
+    z-index: 1;
 }
 
 footer {
@@ -15,6 +17,8 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #FCA313;
+    box-shadow: 1px 1px 10px black;
+    z-index: 1;
 }
 
 body {
