@@ -6,9 +6,8 @@
     height: 80px;
 }
 
-#caixasInformacao {
-    height: 460px;
-}
+
+
 
 .title {
     font-size: 25px;
@@ -16,12 +15,13 @@
 }
 
 .box {
+    margin-bottom: 5px;
     width: 600px;
     height: 25px;
     border-radius: 5px ;
     padding: 10px;
     background-color: #D9D9D9;
-    border: none;
+    border: 3px solid white;
 }
 
 .text {
@@ -47,6 +47,12 @@ a {
 button:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+
+::placeholder{
+    font-weight: bold;
+    color: black;
+    opacity: 0.8;
 }
 
 #p1 {
