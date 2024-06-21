@@ -17,7 +17,7 @@ botao.addEventListener("click", (event) => {
     if (cpf.value.length < 11) {
         alert("cpf incorreto")
     }
-
+    console.log(validaCPF(cpf.value))
 });
 
 cpf.addEventListener("keypress", () => {
@@ -28,6 +28,7 @@ cpf.addEventListener("keypress", () => {
     }else if(inputLength === 11) {
         cpf.value += "-"
     }
+    // console.log(cpf.value)
 });
 
 const validaCPF = (cpf) => {
@@ -38,12 +39,12 @@ const validaCPF = (cpf) => {
 
     if(cpf.length !== 11){
         console.clear()
-        console.error("CPF inválido.")
+        console.error("Campo cpf não foi preenchido corretamente.")
         return
     }
 
     const proximoDigitoVerificador = (cpfIncompleto) => {
-
+        
         let somatoria = 0
 
         for (let index = 0; index < cpfIncompleto.length; index++) {
@@ -54,7 +55,7 @@ const validaCPF = (cpf) => {
 
             somatoria += Number(digitoAtual) * constante
 
-            console.log(somatoria)
+            // console.log(somatoria)
         }
 
         const resto = somatoria % 11
@@ -67,7 +68,8 @@ const validaCPF = (cpf) => {
     let cpfCorreto = cpf.substring(0, 9) + primeiroDigitoVerificador + segundoDigitoVerificador
 
     if(cpf !== cpfCorreto) {
-        alert("cpf inválido")
+        return false
+        console.log("CPF inválido")
     }
 
     console.log("CPF Válido")
@@ -75,4 +77,3 @@ const validaCPF = (cpf) => {
 
 }
 
-validaCPF("131.330.824-26")
