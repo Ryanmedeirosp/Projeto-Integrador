@@ -1,3 +1,4 @@
+const form = document.querySelector("#form")
 const nomeCompleto = document.querySelector("#Box1")
 const cpf = document.querySelector("#Box2")
 const dataNascimento = document.querySelector("#Box3")
@@ -8,6 +9,45 @@ const confirmarSenha = document.querySelector("#Box7")
 const botao = document.querySelector("#btn")
 const span = document.querySelector("#p1")
 
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (telefone.value ==="" || !isTelefoneValid(telefone.value)){
+        alert("Preencha seu Telefone");
+        return;
+    }
+
+    if (email.value === "" || !isEmailValid(email.value)){
+        alert("Preencha seu Email");
+        return;
+    }
+
+});
+
+function isEmailValid(email) {
+    const emailRegex = new RegExp(
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2}$/
+    );
+
+    if(emailRegex.test(email)) {
+        return true;
+    }
+
+    return false;
+};
+
+function isTelefoneValid(telefone) {
+    const telefoneRegex = new RegExp(
+        /^([1-9]{2}\|) 9[0-9]{4}\-[0-9]{4}$/
+    );
+
+    if(telefoneRegex.test(telefone)) {
+        return true;
+    }
+
+    return false;
+};
+
 confirmarSenha.addEventListener("input",(e)=>{
     if (confirmarSenha.value !== senha.value) {
         confirmarSenha.style.border = " 3px solid red"
@@ -17,7 +57,7 @@ confirmarSenha.addEventListener("input",(e)=>{
     }else{
         confirmarSenha.style.border = " 3px solid white"
 
-        span.textContent = "Ao clicar em Enviar informaçõesnvocê autoriza a RD Investimentos a coletar seus dados pessoais de acordo com a nossa Política de Privacidade com o objetivo de comunicar informações sobre o processo de abertura da sua conta."
+        span.textContent = "Ao clicar em Enviar informações você autoriza a RD Investimentos a coletar seus dados pessoais de acordo com a nossa Política de Privacidade com o objetivo de comunicar informações sobre o processo de abertura da sua conta."
 
         senha.style.border = " 3px solid white"
         
