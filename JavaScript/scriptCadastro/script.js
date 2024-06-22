@@ -11,7 +11,7 @@ const botao = document.querySelector("#btn")
 
 botao.addEventListener("click", (event) => {
     event.preventDefault()
-    if ((nomeCompleto == null) && (cpf == null) && (dataNascimento == null) && (email == null) && (telefone == null) && (senha == null) && (confirmarSenha == null)) {
+    if ((nomeCompleto.value == null) && (cpf.value == null) && (dataNascimento.value == null) && (email.value == null) && (telefone.value == null) && (senha.value == null) && (confirmarSenha.value == null)) {
         alert("existem campos vázios")
     }
     if (cpf.value.length < 11) {
@@ -20,15 +20,29 @@ botao.addEventListener("click", (event) => {
     console.log(validaCPF(cpf.value))
 });
 
-cpf.addEventListener("keypress", () => {
-    let inputLength = cpf.value.length
+cpf.addEventListener("input", (event) => {
 
-    if (inputLength === 3 || inputLength === 7) {
-        cpf.value += "."
-    }else if(inputLength === 11) {
-        cpf.value += "-"
+    let currentValue = cpf.value;
+
+    currentValue = currentValue.replace(/[^0-9.\\-]/g, '');
+
+    cpf.value = currentValue;
+
+    let ultimoChar = currentValue.slice(-1);
+
+    if(event.inputType === "deleteContentBackward") {
+        
+        cpf.value = currentValue.slice(0, -1);
+    } else {
+        
+        let inputLength = currentValue.length;
+
+        if (inputLength === 3 || inputLength === 7) {
+            cpf.value += ".";
+        } else if (inputLength === 11) {
+            cpf.value += "-";
+        }
     }
-    // console.log(cpf.value)
 });
 
 const validaCPF = (cpf) => {
@@ -68,8 +82,8 @@ const validaCPF = (cpf) => {
     let cpfCorreto = cpf.substring(0, 9) + primeiroDigitoVerificador + segundoDigitoVerificador
 
     if(cpf !== cpfCorreto) {
-        return false
         console.log("CPF inválido")
+        return false
     }
 
     console.log("CPF Válido")
