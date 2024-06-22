@@ -74,7 +74,7 @@ botao.addEventListener("click", (event) => {
     
 
     if (cpf.value.length < 11) {
-        // alert("cpf incorreto")
+        console.log("campo CPF não preenchido corretamente.")
     }
     console.log(validaCPF(cpf.value))
 });
@@ -90,16 +90,21 @@ cpf.addEventListener("input", (event) => {
     let ultimoChar = currentValue.slice(-1);
 
     if(event.inputType === "deleteContentBackward") {
-        
+
         cpf.value = currentValue.slice(0, -1);
+
     } else {
         
         let inputLength = currentValue.length;
 
         if (inputLength === 3 || inputLength === 7) {
+
             cpf.value += ".";
+
         } else if (inputLength === 11) {
+
             cpf.value += "-";
+
         }
     }
 });
@@ -128,7 +133,6 @@ const validaCPF = (cpf) => {
 
             somatoria += Number(digitoAtual) * constante
 
-            // console.log(somatoria)
         }
 
         const resto = somatoria % 11
