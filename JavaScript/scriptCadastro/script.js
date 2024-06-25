@@ -12,41 +12,33 @@ const span = document.querySelector("#p1")
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    if (telefone.value ==="" || !isTelefoneValid(telefone.value)){
+    if (telefone.value === "" || !isTelefoneValid(telefone.value)) {
         alert("Preencha seu Telefone");
         return;
     }
 
-    if (email.value === "" || !isEmailValid(email.value)){
+    if (email.value === "" || !isEmailValid(email.value)) {
         alert("Preencha seu Email");
         return;
     }
-
 });
 
 function isEmailValid(email) {
     const emailRegex = new RegExp(
-        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2}$/
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     );
 
-    if(emailRegex.test(email)) {
-        return true;
-    }
-
-    return false;
-};
+    return emailRegex.test(email);
+}
 
 function isTelefoneValid(telefone) {
     const telefoneRegex = new RegExp(
-        /^([1-9]{2}\|) 9[0-9]{4}\-[0-9]{4}$/
+        /^\([1-9]{2}\) 9[0-9]{4}\-[0-9]{4}$/
     );
 
-    if(telefoneRegex.test(telefone)) {
-        return true;
-    }
+    return telefoneRegex.test(telefone);
+}
 
-    return false;
-};
 
 confirmarSenha.addEventListener("input",(e)=>{
     if (confirmarSenha.value !== senha.value) {
