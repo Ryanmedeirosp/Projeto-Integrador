@@ -9,19 +9,6 @@ const confirmarSenha = document.querySelector("#Box7")
 const botao = document.querySelector("#btn")
 const span = document.querySelector("#p1")
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    if (telefone.value === "" || !isTelefoneValid(telefone.value)) {
-        alert("Preencha seu Telefone");
-        return;
-    }
-
-    if (email.value === "" || !isEmailValid(email.value)) {
-        alert("Preencha seu Email");
-        return;
-    }
-});
 
 function isEmailValid(email) {
     const emailRegex = new RegExp(
@@ -31,14 +18,28 @@ function isEmailValid(email) {
     return emailRegex.test(email);
 }
 
-function isTelefoneValid(telefone) {
-    const telefoneRegex = new RegExp(
-        /^\([1-9]{2}\) 9[0-9]{4}\-[0-9]{4}$/
-    );
+function validarTelefone(telefone) {
+    // Remove todos os caracteres que não são dígitos
+    telefone.value = telefone.value.replace(/\D/g, '');
 
-    return telefoneRegex.test(telefone);
+    // Limita a quantidade máxima de dígitos para 11
+    telefone.value = telefone.value.slice(0, 11);
+
+    // Formatação do telefone com DDD entre parênteses e a divisória no meio
+    if (telefone.value.length === 10) {
+
+       telefone.value =  telefone.value.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3');
+       return
+
+    } else if (telefone.value.length === 11) {
+
+       telefone.value = telefone.value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+       return
+    }
+
+    // Retorna uma string vazia se o telefone não estiver no formato esperado
+    return '';
 }
-
 
 confirmarSenha.addEventListener("input",(e)=>{
     if (confirmarSenha.value !== senha.value) {
@@ -55,49 +56,90 @@ confirmarSenha.addEventListener("input",(e)=>{
         
     }
 })
+
 function validarLetras(input) {
     
-    input.value = input.value.replace(/[^a-zA-Z\s]/g, '');
+    input.value = input.value.replace(/[^a-zA-Záàâãéèêíïóôõöúçñ\s]/g, '');
 }
+
 nomeCompleto.addEventListener("input",(e)=>{
+
     validarLetras(nomeCompleto)
+
 })
 
+
+telefone.addEventListener("input",(e)=>{
+
+    validarTelefone(telefone)
+
+})
 
 
 
 
 botao.addEventListener("click", (event) => {
    
-    if (nomeCompleto.value =="") {
+    if (nomeCompleto.value =="" ) {
         nomeCompleto.style.border = " 3px solid red"
         nomeCompleto.placeholder = "Preencha seu nome"
 
     }
-    if (cpf.value == "") {
+
+    if(nomeCompleto.value !==""){
+        nomeCompleto.style.border = " 3px solid green"
+        nomeCompleto.placeholder = ""
+    }
+
+    if (cpf.value == "" || !validaCPF(cpf.value)) {
         cpf.style.border = " 3px solid red"
         cpf.placeholder = "Preencha seu CPF"
         
+    }else{
+        cpf.style.border = " 3px solid green"
+        cpf.placeholder = ""
     }
+
+
     if (dataNascimento.value == "") {
         dataNascimento.style.border = " 3px solid red"
     }
-    if (email.value == "")  {
+
+    if (dataNascimento.value !== "") {
+        dataNascimento.style.border = " 3px solid green"
+    }
+
+    if (email.value == "" || !isEmailValid(email.value))  {
         
         email.style.border = " 3px solid red"
         email.placeholder = "Preencha seu email"
         
+    }else{
+
+        email.style.border = " 3px solid green"
+        email.placeholder = ""
     }
-    if (telefone.value == "") {
+
+   
+
+    if (telefone.value == "" || validarTelefone(telefone) ===   '' ) {
         telefone.style.border = " 3px solid red"
         telefone.placeholder = "Preencha seu telefone"
         
+    }else{
+          telefone.style.border = " 3px solid green"
+        telefone.placeholder = ""
+
     }
+
+   
+
     if (senha.value == "") {
         senha.style.border = " 3px solid red"
         senha.placeholder = "Preencha sua senha"
         
     }
+
     if (confirmarSenha.value == "") {
         confirmarSenha.style.border = " 3px solid red"
         confirmarSenha.placeholder = "Preencha sua senha"
