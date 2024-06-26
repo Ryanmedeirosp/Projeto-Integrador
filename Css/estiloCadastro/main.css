@@ -3,7 +3,7 @@
 }
 
 #texto2 {
-    height: 80px;
+    height: 120px;
 }
 
 
@@ -55,11 +55,12 @@ button:hover {
     opacity: 0.8;
 }
 
-#p1 {
+.p1 {
     width: 620px;
     height: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 #p2 {
