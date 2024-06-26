@@ -87,9 +87,6 @@ telefone.addEventListener("input",(e)=>{
 
 })
 
-
-
-
 botao.addEventListener("click", (event) => {
    
     if (nomeCompleto.value =="" || validarInput(nomeCompleto.value) ===   '' ) {
@@ -132,22 +129,17 @@ botao.addEventListener("click", (event) => {
         return
         
     }else{
-
         email.style.border = " 3px solid green"
         email.placeholder = ""
     }
-
-   
 
     if (telefone.value == "" || validarTelefone(telefone) ===   '' ) {
         telefone.style.border = " 3px solid red"
         telefone.placeholder = "Preencha seu telefone"
         return
-        
     }else{
-          telefone.style.border = " 3px solid green"
+        telefone.style.border = " 3px solid green"
         telefone.placeholder = ""
-
     }
 
    
@@ -156,22 +148,18 @@ botao.addEventListener("click", (event) => {
         senha.style.border = " 3px solid red"
         senha.placeholder = "Preencha sua senha"
         return
-        
     }
 
     if (confirmarSenha.value == "") {
         confirmarSenha.style.border = " 3px solid red"
         confirmarSenha.placeholder = "Preencha sua senha"
         return
-        
     }
     
 
     if (cpf.value.length < 11) {
-
         console.log("campo CPF não preenchido corretamente.")
         return
-
     }
 
     const senhaValue = senha.value;
@@ -197,6 +185,19 @@ botao.addEventListener("click", (event) => {
     console.log(validaCPF(cpf.value))
 
 });
+
+const invalidos = [
+    '00000000000',
+    '11111111111',
+    '22222222222',
+    '33333333333',
+    '44444444444',
+    '55555555555',
+    '66666666666',
+    '77777777777',
+    '88888888888',
+    '99999999999'
+];
 
 cpf.addEventListener("input", (event) => {
     let currentValue = cpf.value;
@@ -257,6 +258,11 @@ const validaCPF = (cpf) => {
     if(cpf !== cpfCorreto) {
         console.log("CPF inválido")
         return false
+    }
+
+    if (invalidos.includes(cpf)) {
+        console.log("CPF inválido")
+        return false;
     }
 
     console.log("CPF Válido")
