@@ -8,6 +8,29 @@ const senha = document.querySelector("#Box6")
 const confirmarSenha = document.querySelector("#Box7")
 const botao = document.querySelector("#btn")
 const span = document.querySelector("#p1")
+const imgOlhoSenha = document.querySelector("#imgOlhoSenha")
+const imgOlhoConfirmarSenha = document.querySelector("#imgOlhoConfirmarSenha")
+
+imgOlhoSenha.addEventListener("click",(e)=>{
+    if (senha.type === "password") {
+        senha.type = "text"
+        imgOlhoSenha.src = '../imagens/Olho aberto.png'
+    }else{
+        senha.type = "password"
+        imgOlhoSenha.src = '../imagens/Olho fechado.png'
+    }
+})
+
+
+imgOlhoConfirmarSenha.addEventListener("click",(e)=>{
+    if (senha.type === "password") {
+        senha.type = "text"
+        imgOlhoConfirmarSenha.src = '../imagens/Olho aberto.png'
+    }else{
+        senha.type = "password"
+        imgOlhoConfirmarSenha.src = '../imagens/Olho fechado.png'
+    }
+})
 
 
 function isEmailValid(email) {
@@ -40,6 +63,18 @@ function validarTelefone(telefone) {
     // Retorna uma string vazia se o telefone não estiver no formato esperado
     return '';
 }
+
+// Calcula a data mínima permitida (18 anos atrás)
+let dataMinima = new Date();
+dataMinima.setFullYear(dataMinima.getFullYear() - 18);
+
+// Formata a data mínima no formato YYYY-MM-DD
+let dataMinimaFormatada = dataMinima.toISOString().slice(0, 10);
+
+// Define o atributo max do input de data para a data mínima permitida
+dataNascimento.setAttribute('max', dataMinimaFormatada);
+
+
 
 confirmarSenha.addEventListener("input",(e)=>{
     if (confirmarSenha.value !== senha.value) {
@@ -112,7 +147,7 @@ botao.addEventListener("click", (event) => {
     }
 
 
-    if (dataNascimento.value == "") {
+    if (dataNascimento.value == "" || dataNascimento.value > dataMinimaFormatada) {
         dataNascimento.style.border = " 3px solid red"
         return
 
