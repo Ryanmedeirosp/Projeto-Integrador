@@ -90,6 +90,7 @@
     border-radius: 10px;
     font-size: larger;
     border: none;
+    margin-top: 10px;
 }
 
 #botaoConfirmar button:hover {
