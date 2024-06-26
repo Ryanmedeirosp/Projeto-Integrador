@@ -7,12 +7,14 @@ acessarContaBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
     if (cpf.value === "" || !isCpfValid(cpf.value)) {
-        alert("Preencha seu CPF");
+        cpf.style.border = " 3px solid red"
+        cpf.placeholder = "Preencha seu CPF"
         return;
     }
 
     if (senha.value === "" || !isSenhaValid(senha.value)) {
-        alert("Preencha sua Senha");
+        senha.style.border = " 3px solid red"
+        senha.placeholder = "Preencha sua senha"
         return;
     }
 

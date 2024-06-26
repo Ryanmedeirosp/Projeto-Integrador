@@ -6,7 +6,8 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     if (email.value === "" || !isEmailValid(email.value)) {
-        alert("Preencha seu Email corretamente");
+        email.style.border = " 3px solid red"
+        email.placeholder = "Preencha seu nome"
         return;
     }
 

@@ -7,12 +7,14 @@ confirmarBtn.addEventListener("click", (event) =>{
     event.preventDefault();
 
     if (novasenha.value === "" || !isnovasenhaValid(novasenha.value)) {
-        alert("Coloque sua nova senha");
+        novasenha.style.border = " 3px solid red"
+        novasenha.placeholder = "Coloque sua nova senha"
         return;
     }
   
     if (confsenha.value !== novasenha.value || !isconfsenhaValid(confsenha.value)) {
-        alert("Confirme sua nova senha corretamente");
+        confsenha.style.border = " 3px solid red"
+        confsenha.placeholder = "Confirme sua nova senha corretamente"
         return;
     }
 
