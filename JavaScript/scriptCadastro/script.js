@@ -84,13 +84,13 @@ botao.addEventListener("click", (event) => {
         nomeCompleto.style.border = " 3px solid red"
         nomeCompleto.placeholder = "Preencha seu nome"
 
-    }
-
-    if(nomeCompleto.value !==""){
+    }else{
         nomeCompleto.style.border = " 3px solid green"
         nomeCompleto.placeholder = ""
+
     }
 
+   
     if (cpf.value == "" || !validaCPF(cpf.value)) {
         cpf.style.border = " 3px solid red"
         cpf.placeholder = "Preencha seu CPF"
@@ -103,11 +103,11 @@ botao.addEventListener("click", (event) => {
 
     if (dataNascimento.value == "") {
         dataNascimento.style.border = " 3px solid red"
+    }else{
+          dataNascimento.style.border = " 3px solid green"
+
     }
 
-    if (dataNascimento.value !== "") {
-        dataNascimento.style.border = " 3px solid green"
-    }
 
     if (email.value == "" || !isEmailValid(email.value))  {
         
@@ -150,39 +150,44 @@ botao.addEventListener("click", (event) => {
     if (cpf.value.length < 11) {
         console.log("campo CPF não preenchido corretamente.")
     }
+
+    const senhaValue = senha.value;
+    const confirmarSenhaValue = confirmarSenha.value;
+
+    const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!senhaRegex.test(senhaValue)) {
+        console.log('A senha deve ter no mínimo 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caracter especial.')
+    }else if (senhaValue !== confirmarSenhaValue) {
+        console.log('As senhas não correspondem.');
+    } else{
+        console.log('Senha válida!');
+    }
+
     console.log(validaCPF(cpf.value))
+
 });
 
 cpf.addEventListener("input", (event) => {
-
     let currentValue = cpf.value;
+    let formattedValue = currentValue.replace(/[^0-9]/g, '');
 
-    currentValue = currentValue.replace(/[^0-9.\\-]/g, '');
-
-    cpf.value = currentValue;
-
-    let ultimoChar = currentValue.slice(-1);
-
-    if(event.inputType === "deleteContentBackward") {
-
-        cpf.value = currentValue.slice(0, -1);
-
-    } else {
-        
-        let inputLength = currentValue.length;
-
-        if (inputLength === 3 || inputLength === 7) {
-
-            cpf.value += ".";
-
-        } else if (inputLength === 11) {
-
-            cpf.value += "-";
-
-        }
+    if (event.inputType === "deleteContentBackward") {
+        formattedValue = formattedValue.slice(0, -1);
     }
-});
 
+    let newValue = '';
+    for (let i = 0; i < formattedValue.length; i++) {
+        if (i === 3 || i === 6) {
+            newValue += '.';
+        }
+        if (i === 9) {
+            newValue += '-';
+        }
+        newValue += formattedValue[i];
+    }
+
+    cpf.value = newValue;
+});
 const validaCPF = (cpf) => {
 
     cpf = cpf.replace(/\D/g, "")
