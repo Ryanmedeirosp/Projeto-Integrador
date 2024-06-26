@@ -65,9 +65,21 @@ function validarLetras(input) {
 nomeCompleto.addEventListener("input",(e)=>{
 
     validarLetras(nomeCompleto)
+    validarInput(nomeCompleto.value)
 
 })
 
+function validarInput(input) {
+    // Remove os espaços em branco do início e do fim da string
+    let trimmedInput = input.trim();
+
+    // Verifica se após remover os espaços em branco a string está vazia
+    if (trimmedInput === '') {
+        return ''; // Se estiver vazia, retorna falso
+    } else {
+        return true; // Caso contrário, retorna verdadeiro
+    }
+}
 
 telefone.addEventListener("input",(e)=>{
 
@@ -80,7 +92,7 @@ telefone.addEventListener("input",(e)=>{
 
 botao.addEventListener("click", (event) => {
    
-    if (nomeCompleto.value =="" ) {
+    if (nomeCompleto.value =="" || validarInput(nomeCompleto.value) ===   '' ) {
         nomeCompleto.style.border = " 3px solid red"
         nomeCompleto.placeholder = "Preencha seu nome"
         return
