@@ -37,11 +37,6 @@ acessarConta.addEventListener("click",(e)=>{
        
     )
 
-    if (cpf.value.length < 11) {
-        console.log("campo CPF não preenchido corretamente.")
-        return
-    }
-
     const senhaValue = senha.value;
 
     const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
@@ -50,6 +45,23 @@ acessarConta.addEventListener("click",(e)=>{
         return
     }else{
         console.log('Senha válida!');
+    }
+
+    if (senha.value == "") {
+        senha.style.border = " 3px solid red"
+        senha.placeholder = "Preencha sua senha"
+        return
+    }
+
+    if (cpf.value.length < 11) {
+        console.log("campo CPF não preenchido corretamente.")
+        return
+    }
+
+    if (cpf.value == "" || !validaCPF(cpf.value)) {
+        cpf.style.border = " 3px solid red"
+        cpf.placeholder = "Preencha seu CPF"
+        return
     }
 
 });
