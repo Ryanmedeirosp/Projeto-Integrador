@@ -163,7 +163,7 @@ botao.addEventListener("click", (event) => {
 
     if ((senha.value == "") || !senhaRegex.test(senhaValue)) {
         senha.style.border = " 3px solid red"
-        console.log('A senha deve ter no mínimo 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caracter especial.')
+       
         senha.placeholder = "Preencha sua senha"
         return
     }else if (senhaValue !== confirmarSenhaValue) {

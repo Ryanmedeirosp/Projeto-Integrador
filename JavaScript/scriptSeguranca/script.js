@@ -1,27 +1,74 @@
 const form = document.querySelector("#form");
 const antigasenha = document.querySelector("#Box1");
 const novasenha = document.querySelector("#Box2");
-const confsenha = document.querySelector("#Box2");
+const confsenha = document.querySelector("#Box3");
 const confirmarBtn = document.querySelector("#confirmar");
 const usuario = JSON.parse(localStorage.usuariosessao);
+const olhoSenhaAtual = document.querySelector("#senhaAtual");
+const olhoSenhaNova = document.querySelector("#senhaNova");
+const olhoConfirmarNova = document.querySelector("#confirmarNova")
+console.log(usuario)
+const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
+
+olhoSenhaAtual.addEventListener("click",(e)=>{
+    if (antigasenha.type === "password") {
+        antigasenha.type = "text"
+        olhoSenhaAtual.src = '../imagens/Olho aberto.png'
+    }else{
+        antigasenha.type = "password"
+        olhoSenhaAtual.src = '../imagens/Olho fechado.png'
+    }
+})
+
+olhoSenhaNova.addEventListener("click",(e)=>{
+    if (novasenha.type === "password") {
+        novasenha.type = "text"
+        olhoSenhaNova.src = '../imagens/Olho aberto.png'
+    }else{
+        novasenha.type = "password"
+        olhoSenhaNova.src = '../imagens/Olho fechado.png'
+    }
+})
+
+olhoConfirmarNova.addEventListener("click",(e)=>{
+    if (confsenha.type === "password") {
+        confsenha.type = "text"
+        olhoConfirmarNova.src = '../imagens/Olho aberto.png'
+    }else{
+        confsenha.type = "password"
+        olhoConfirmarNova.src = '../imagens/Olho fechado.png'
+    }
+})
+
+
 
 confirmarBtn.addEventListener("click", (event) =>{
     event.preventDefault();
 
-    if (antigasenha.value === "" || !isantigasenhaValid(antigasenha.value)) {
-        alert("Coloque sua senha atual");
+    if (antigasenha.value !== usuario.senha) {
+        antigasenha.style.border = "2px solid red"
+        antigasenha.placeholder = "Preencha sua senha"
         return;
+    }else{
+         antigasenha.style.border = "2px solid #D9D9D9"
     }
     
-    if (novasenha.value === "" || !isnovasenhaValid(novasenha.value)) {
-        alert("Coloque sua nova senha");
+    if (novasenha.value === "" || !senhaRegex.test(novasenha.value)) {
+        novasenha.style.border = "2px solid red"
+        novasenha.placeholder = "Preencha sua senha"
         return;
-    }
+    }else{
+        novasenha.style.border = "2px solid #D9D9D9"
+   }
   
-    if (confsenha.value !== novasenha.value || !isconfsenhaValid(confsenha.value)) {
-        alert("Confirme sua nova senha corretamente");
+    if (confsenha.value !== novasenha.value ) {
+        confsenha.style.border = "2px solid red"
+        confsenha.placeholder = "Preencha sua senha"
         return;
     }
+    else{
+        confsenha.style.border = "2px solid #D9D9D9"
+   }
     fetch('http://localhost:3000/api/usuario/alterarSenha', {
         method: 'PATCH',
         headers:{
@@ -39,31 +86,11 @@ confirmarBtn.addEventListener("click", (event) =>{
         html =>{
             usuario.senha = JSON.stringify(html.result)
             localStorage.usuariosessao = JSON.stringify(usuario)
-            location.reload();
+            window.location.href = "../html/autenticacao.html"
         } 
     );
 });
 
-function isantigasenhaValid(antigasenha) {
-    const antigasenhaRegex = new RegExp(
-        /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/
-    );
 
-    return antigasenhaRegex.test(antigasenha);
-}
 
-function isnovasenhaValid(novasenha) {
-    const novasenhaRegex = new RegExp(
-        /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/
-    );
 
-    return novasenhaRegex.test(novasenha);
-}
-
-function isconfsenhaValid(confsenha) {
-    const confsenhaRegex = new RegExp(
-        /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/
-    );
-
-    return confsenhaRegex.test(confsenha);
-}

@@ -40,7 +40,8 @@ acessarConta.addEventListener("click",(e)=>{
                     email : html.result.email,
                     cpf : html.result.cpf,
                     telefone : html.result.telefone,
-                    id : html.result.id
+                    id : html.result.id,
+                    senha : html.result.senha
     
                 }
                 
@@ -49,7 +50,7 @@ acessarConta.addEventListener("click",(e)=>{
                
                 window.location.href = "../html/home.html"
             }else{
-                console.log("senha invalida")
+                senha.style.border = "3px solid red"
             }
           
            
@@ -79,19 +80,7 @@ acessarConta.addEventListener("click",(e)=>{
     }
 
 
-    const senhaValue = senha.value;
-
-    const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
-
-    if (senha.value == "" || !senhaRegex.test(senhaValue)) {
-        senha.style.border = "3px solid red"
-        senha.placeholder = "Preencha sua senha"
-        console.log('Senha inválida.')
-        return
-    }else{
-        senha.style.border = "none"
-        console.log('Senha válida!');
-    }
+    
 
 });
 
