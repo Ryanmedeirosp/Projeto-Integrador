@@ -124,41 +124,32 @@ botao.addEventListener("click", (event) => {
         nomeCompleto.style.border = " 3px solid red"
         nomeCompleto.placeholder = "Preencha seu nome"
         return
-
     }else{
         nomeCompleto.style.border = " 3px solid green"
         nomeCompleto.placeholder = ""
-
     }
-
    
     if (cpf.value == "" || !validaCPF(cpf.value)) {
         cpf.style.border = " 3px solid red"
         cpf.placeholder = "Preencha seu CPF"
         return
-        
     }else{
         cpf.style.border = " 3px solid green"
         cpf.placeholder = ""
     }
 
-
     if (dataNascimento.value == "" || dataNascimento.value > dataMinimaFormatada) {
         dataNascimento.style.border = " 3px solid red"
         return
-
     }else{
           dataNascimento.style.border = " 3px solid green"
-
     }
 
 
     if (email.value == "" || !isEmailValid(email.value))  {
-        
         email.style.border = " 3px solid red"
         email.placeholder = "Preencha seu email"
         return
-        
     }else{
         email.style.border = " 3px solid green"
         email.placeholder = ""
@@ -172,8 +163,6 @@ botao.addEventListener("click", (event) => {
         telefone.style.border = " 3px solid green"
         telefone.placeholder = ""
     }
-
-   
 
     if (senha.value == "") {
         senha.style.border = " 3px solid red"
@@ -198,19 +187,15 @@ botao.addEventListener("click", (event) => {
 
     const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
     if (!senhaRegex.test(senhaValue)) {
-
         console.log('A senha deve ter no mínimo 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caracter especial.')
         return
     }else if (senhaValue !== confirmarSenhaValue) {
-
         console.log('As senhas não correspondem.');
         return
-
     } else{
-
         console.log('Senha válida!');
-
     }
+
     console.log(nomeCompleto.value)
 
     fetch("http://localhost:3000/api/usuario",{
@@ -271,6 +256,7 @@ cpf.addEventListener("input", (event) => {
 
     cpf.value = newValue;
 });
+
 const validaCPF = (cpf) => {
 
     cpf = cpf.replace(/\D/g, "")
@@ -315,8 +301,6 @@ const validaCPF = (cpf) => {
         console.log("CPF inválido")
         return false;
     }
-
     console.log("CPF Válido")
     return true
-
 }
