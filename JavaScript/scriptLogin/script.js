@@ -37,28 +37,31 @@ acessarConta.addEventListener("click",(e)=>{
        
     )
 
-    const senhaValue = senha.value;
-
-    const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
-    
-    if (senha.value == "" || !senhaRegex.test(senhaValue)) {
-        senha.style.border = " 3px solid red"
-        senha.placeholder = "Preencha sua senha"
-        console.log('Senha inválida.')
-        return
-    }else{
-        console.log('Senha válida!');
-    }
-
-    if (cpf.value.length < 11) {
+    if (cpf.value.length < 14) {
         console.log("campo CPF não preenchido corretamente.")
+        cpf.style.border = " 3px solid red"
         return
     }
 
     if (cpf.value == "" || !validaCPF(cpf.value)) {
-        cpf.style.border = " 3px solid red"
+        cpf.style.border = "3px solid red"
         cpf.placeholder = "Preencha seu CPF"
         return
+    }
+
+
+    const senhaValue = senha.value;
+
+    const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
+
+    if (senha.value == "" || !senhaRegex.test(senhaValue)) {
+        senha.style.border = "3px solid red"
+        senha.placeholder = "Preencha sua senha"
+        console.log('Senha inválida.')
+        return
+    }else{
+        senha.style.border = "none"
+        console.log('Senha válida!');
     }
 
 });
