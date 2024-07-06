@@ -54,3 +54,14 @@ button:hover {
     font-weight: bold;
     font-size: medium;
 }
+
+.divInputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#imgOlhoSenha:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

@@ -1,6 +1,17 @@
 const cpf = document.querySelector("#cpf")
 const senha = document.querySelector("#senha")
 const acessarConta = document.querySelector("#acessarConta")
+const imgOlhoSenha = document.querySelector("#imgOlhoSenha")
+
+imgOlhoSenha.addEventListener("click",(e)=>{
+    if (senha.type === "password") {
+        senha.type = "text"
+        imgOlhoSenha.src = '../imagens/Olho aberto.png'
+    }else{
+        senha.type = "password"
+        imgOlhoSenha.src = '../imagens/Olho fechado.png'
+    }
+})
 
 acessarConta.addEventListener("click",(e)=>{
 
@@ -41,9 +52,17 @@ acessarConta.addEventListener("click",(e)=>{
         console.log("campo CPF não preenchido corretamente.")
         cpf.style.border = " 3px solid red"
         return
+    }else{
+        cpf.style.border = "none"
     }
 
-    if (cpf.value == "" || !validaCPF(cpf.value)) {
+    if (!validaCPF(cpf.value)){
+        cpf.style.border = "3px solid red"
+        cpf.placeholder = "Preencha seu CPF"
+        return
+    }
+
+    if (cpf.value == "") {
         cpf.style.border = "3px solid red"
         cpf.placeholder = "Preencha seu CPF"
         return
@@ -143,7 +162,7 @@ const validaCPF = (cpf) => {
     }
 
     if (invalidos.includes(cpf)) {
-        console.log("CPF inválido")
+        alert("CPF inválido")
         return false;
     }
     
