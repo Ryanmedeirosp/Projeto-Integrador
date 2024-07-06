@@ -23,7 +23,7 @@ acessarConta.addEventListener("click",(e)=>{
             console.log(html.result)
             let usuario = {
                 nome : html.result.nome,
-                data : html.result.nascimento,
+                nascimento : html.result.nascimento,
                 email : html.result.email,
                 cpf : html.result.cpf,
                 telefone : html.result.telefone,
@@ -33,6 +33,7 @@ acessarConta.addEventListener("click",(e)=>{
             
             localStorage.usuariosessao = JSON.stringify(usuario)
             console.log(localStorage.usuariosessao)
+            window.location.href = "../html/home.html"
         } 
        
     )

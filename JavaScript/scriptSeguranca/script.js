@@ -3,6 +3,7 @@ const antigasenha = document.querySelector("#Box1");
 const novasenha = document.querySelector("#Box2");
 const confsenha = document.querySelector("#Box2");
 const confirmarBtn = document.querySelector("#confirmar");
+const usuario = JSON.parse(localStorage.usuariosessao);
 
 confirmarBtn.addEventListener("click", (event) =>{
     event.preventDefault();
@@ -21,6 +22,26 @@ confirmarBtn.addEventListener("click", (event) =>{
         alert("Confirme sua nova senha corretamente");
         return;
     }
+    fetch('http://localhost:3000/api/usuario/alterarSenha', {
+        method: 'PATCH',
+        headers:{
+            'accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+            id: usuario.id,
+            senhaAtual: antigasenha.value,
+            novaSenha: novasenha.value
+        })
+    }).then(
+        response => response.json()
+    ).then(
+        html =>{
+            usuario.senha = JSON.stringify(html.result)
+            localStorage.usuariosessao = JSON.stringify(usuario)
+            location.reload();
+        } 
+    );
 });
 
 function isantigasenhaValid(antigasenha) {

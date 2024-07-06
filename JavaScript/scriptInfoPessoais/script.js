@@ -4,12 +4,12 @@ const email = document.querySelector("#Box2");
 const telefone = document.querySelector("#Box3");
 const nascimento = document.querySelector("#Box5");
 const botaoSalvar = document.querySelector("#botaoSalvar")
-
+const usuario = JSON.parse(localStorage.usuariosessao)
 
 
 
 window.onload = () =>{
-    const usuario = JSON.parse(localStorage.usuariosessao) 
+     
     console.log(usuario.id)
 
     preencherCampus()
@@ -20,7 +20,7 @@ function preencherCampus(){
     nome.value = usuario.nome
     email.value = usuario.email
     telefone.value = usuario.telefone
-    nascimento.value = usuario.data
+    nascimento.value = usuario.nascimento
 }
 
 
@@ -47,7 +47,7 @@ botaoSalvar.addEventListener("click", (e)=>{
         html =>{
             console.log(html)
             localStorage.usuariosessao = JSON.stringify(html.result)
-            preencherCampus()
+            location.reload()
            
         } 
     )
