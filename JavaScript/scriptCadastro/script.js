@@ -42,13 +42,11 @@ function isEmailValid(email) {
 }
 
 function validarTelefone(telefone) {
-    // Remove todos os caracteres que não são dígitos
+    
     telefone.value = telefone.value.replace(/\D/g, '');
 
-    // Limita a quantidade máxima de dígitos para 11
     telefone.value = telefone.value.slice(0, 11);
 
-    // Formatação do telefone com DDD entre parênteses e a divisória no meio
     if (telefone.value.length === 10) {
 
        telefone.value =  telefone.value.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3');
@@ -60,18 +58,17 @@ function validarTelefone(telefone) {
        return
     }
 
-    // Retorna uma string vazia se o telefone não estiver no formato esperado
     return '';
 }
 
-// Calcula a data mínima permitida (18 anos atrás)
+
 let dataMinima = new Date();
 dataMinima.setFullYear(dataMinima.getFullYear() - 18);
 
-// Formata a data mínima no formato YYYY-MM-DD
+
 let dataMinimaFormatada = dataMinima.toISOString().slice(0, 10);
 
-// Define o atributo max do input de data para a data mínima permitida
+
 dataNascimento.setAttribute('max', dataMinimaFormatada);
 
 
@@ -89,7 +86,6 @@ confirmarSenha.addEventListener("input",(e)=>{
 })
 
 function validarLetras(input) {
-    
     input.value = input.value.replace(/[^a-zA-Záàâãéèêíïóôõöúçñ\s]/g, '');
 }
 
@@ -101,14 +97,11 @@ nomeCompleto.addEventListener("input",(e)=>{
 })
 
 function validarInput(input) {
-    // Remove os espaços em branco do início e do fim da string
     let trimmedInput = input.trim();
-
-    // Verifica se após remover os espaços em branco a string está vazia
     if (trimmedInput === '') {
-        return ''; // Se estiver vazia, retorna falso
+        return '';
     } else {
-        return true; // Caso contrário, retorna verdadeiro
+        return true; 
     }
 }
 

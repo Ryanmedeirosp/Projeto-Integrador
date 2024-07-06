@@ -28,6 +28,9 @@
     border-radius: 3px ;
     background-color: white;
     border: none;
+    font-size: medium;
+    background-color: rgb(201, 201, 201);
+    color: black;
 }
 
 #containerInformacoesConta {
@@ -73,25 +76,49 @@
     display: flex;
 }
 
-#botaoEditar { 
+#botaoEditarSair { 
     margin-top: 30px;
     margin-left: 390px;
     height: 60px;
     width: 140px;
     display: flex;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
 
-#botaoEditar button {
+#botaoEditar {
     border-radius: 10px;
     border: none;
     font-size: medium;
     height: 43px;
     width: 90px;
     padding: 10px;
-    background-color:#aaaaaa;
+    background-color: rgb(91, 91, 255);
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#botaoEditar:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#botaoSair {
+    border-radius: 10px;
+    border: none;
+    font-size: medium;
+    height: 43px;
+    width: 70px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#botaoSair:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 #botaoEditar button:hover {
@@ -116,37 +143,12 @@
     height: 43px;
     width: 120px;
     padding: 10px;
-    background-color:#aaaaaa ;
+    background-color:#aaaaaa;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 #botoesCancelarSalvar button:hover {
     cursor: pointer;
     opacity: 0.8;
-}
-
-#divSair{
-   
-    margin-bottom: 400px;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    
-}
-
-#divSair button{
-    border-radius: 10px;
-    border: none;
-    font-size: 15px;
-    height: 43px;
-    width: 100px;
-    padding: 10px;
-    background-color:red ;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#divSair button:hover{
-    opacity: 0.7;
-    cursor: pointer;
-
 }

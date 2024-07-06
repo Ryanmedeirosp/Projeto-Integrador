@@ -31,19 +31,29 @@ acessarConta.addEventListener("click",(e)=>{
         response => response.json()
     ).then(
         html =>{
-            console.log(html.result)
-            let usuario = {
-                nome : html.result.nome,
-                data : html.result.nascimento,
-                email : html.result.email,
-                cpf : html.result.cpf,
-                telefone : html.result.telefone,
-                id : html.result.id
 
+            if (html.error == '') {
+                console.log(html.result)
+                let usuario = {
+                    nome : html.result.nome,
+                    nascimento : html.result.nascimento,
+                    email : html.result.email,
+                    cpf : html.result.cpf,
+                    telefone : html.result.telefone,
+                    id : html.result.id
+    
+                }
+                
+                localStorage.usuariosessao = JSON.stringify(usuario)
+                console.log(localStorage.usuariosessao)
+               
+                window.location.href = "../html/home.html"
+            }else{
+                console.log("senha invalida")
             }
+          
+           
             
-            localStorage.usuariosessao = JSON.stringify(usuario)
-            console.log(localStorage.usuariosessao)
         } 
        
     )

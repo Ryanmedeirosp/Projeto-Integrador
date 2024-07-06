@@ -48,25 +48,26 @@
         
         <div id="containerInformacoesConta">
 
-            <div id="botaoEditar">
-                <button>Editar</button>
+            <div id="botaoEditarSair">
+                <button id="botaoEditar">Editar</button>
+                <a href="autenticacao.html"><button id="botaoSair">Sair</button></a>
             </div>
 
             <div id="containerNomeInfo">
                 <p class="text">Nome</p>
-                <input type="text" name="nome" class="box" id="Box1" required >
+                <input type="text" name="nome" class="box" id="Box1" disabled required >
             </div>
 
             <div id="containerTelefoneEmailInfo">
 
                 <div>
                     <p class="text" id="text2">Email</p>
-                    <input type="email" name="Email" class="box" id="Box2" required >
+                    <input type="email" name="Email" class="box" id="Box2" disabled required >
                 </div>
 
                 <div>
                     <p class="text" id="text3">Telefone</p>
-                    <input type="text" maxlength="11" name="Telefone" class="box" id="Box3" required >
+                    <input type="text" maxlength="11" name="Telefone" class="box" id="Box3" disabled required >
                 </div>
 
             </div>
@@ -75,24 +76,21 @@
 
                 <div>
                     <p class="text" id="text4">CPF</p>
-                    <input type="text" maxlength="11" name="cpf" class="box" id="Box4" required >
+                    <input type="text" maxlength="14" name="cpf" class="box" id="Box4" disabled required >
                 </div>
 
                 <div>
                     <p class="text" id="text5">Data de nascimento</p>
-                    <input type="date" name="Data" class="box" id="Box5">
+                    <input type="date" name="Data" class="box" id="Box5" disabled>
                 </div>
 
             </div>
 
             <div id="botoesCancelarSalvar">
-                <button id="botaoCancelar">Cancelar</button>
-                <button id="botaoSalvar">Salvar</button>
+                <button id="botaoCancelar" disabled>Cancelar</button>
+                <button id="botaoSalvar" disabled>Salvar</button>
             </div>
 
-        </div>
-        <div id="divSair">
-            <a href="autenticacao.html"><button>SAIR</button></a>
         </div>
 
     </main>

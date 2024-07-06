@@ -45,7 +45,7 @@ main {
 }
 
 ::-webkit-datetime-edit-text { 
-    color: red; padding: 0 0.8em; 
+    color: rgb(0, 0, 0); padding: 0 0.8em; 
 }
 
 ::-webkit-inner-spin-button {
