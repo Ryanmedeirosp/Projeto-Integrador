@@ -1,38 +1,38 @@
-const form = document.querySelector("#form");
-const cpf = document.querySelector("#Box1");
-const senha = document.querySelector("#Box2");
-const acessarContaBtn = document.querySelector("#acessarConta");
+const cpf = document.querySelector("#cpf")
+const senha = document.querySelector("#senha")
+const acessarConta = document.querySelector("#acessarConta")
 
-acessarContaBtn.addEventListener("click", (event) => {
-    event.preventDefault();
+acessarConta.addEventListener("click",(e)=>{
+    localStorage.clear()
+    fetch("http://localhost:3000/api/usuario/login",{
+        method: "POST",
+        headers:{
+            'accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+            senha : senha.value,
+            cpf : cpf.value
+        })
+    }).then(
+        response => response.json()
+    ).then(
+        html =>{
+            console.log(html.result)
+            let usuario = {
+                nome : html.result.nome,
+                data : html.result.nascimento,
+                email : html.result.email,
+                cpf : html.result.cpf,
+                telefone : html.result.telefone,
+                id : html.result.id
 
-    if (cpf.value === "" || !isCpfValid(cpf.value)) {
-        cpf.style.border = " 3px solid red"
-        cpf.placeholder = "Preencha seu CPF"
-        return;
-    }
+            }
+            
+            localStorage.usuariosessao = JSON.stringify(usuario)
+            console.log(localStorage.usuariosessao)
+        } 
+       
+    )
 
-    if (senha.value === "" || !isSenhaValid(senha.value)) {
-        senha.style.border = " 3px solid red"
-        senha.placeholder = "Preencha sua senha"
-        return;
-    }
-
-    window.location.href = "home.html"; 
 });
-
-function isCpfValid(cpf) {
-    const cpfRegex = new RegExp(
-        /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/
-    );
-
-    return cpfRegex.test(cpf);
-}
-
-function isSenhaValid(senha) {
-    const senhaRegex = new RegExp(
-        /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/
-    );
-
-    return senhaRegex.test(senha);
-}

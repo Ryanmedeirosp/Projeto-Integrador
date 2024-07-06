@@ -23,11 +23,11 @@ imgOlhoSenha.addEventListener("click",(e)=>{
 
 
 imgOlhoConfirmarSenha.addEventListener("click",(e)=>{
-    if (senha.type === "password") {
-        senha.type = "text"
+    if (confirmarSenha.type === "password") {
+        confirmarSenha.type = "text"
         imgOlhoConfirmarSenha.src = '../imagens/Olho aberto.png'
     }else{
-        senha.type = "password"
+        confirmarSenha.type = "password"
         imgOlhoConfirmarSenha.src = '../imagens/Olho fechado.png'
     }
 })
@@ -79,14 +79,10 @@ dataNascimento.setAttribute('max', dataMinimaFormatada);
 confirmarSenha.addEventListener("input",(e)=>{
     if (confirmarSenha.value !== senha.value) {
         confirmarSenha.style.border = " 3px solid red"
-        span.textContent = "Suas senhas não estão iguais"
         senha.style.border = " 3px solid red"
         
     }else{
         confirmarSenha.style.border = " 3px solid green"
-
-        span.textContent = "Ao clicar em Enviar informações você autoriza a RD Investimentos a coletar seus dados pessoais de acordo com a nossa Política de Privacidade com o objetivo de comunicar informações sobre o processo de abertura da sua conta."
-
         senha.style.border = " 3px solid green"
         
     }
@@ -215,9 +211,29 @@ botao.addEventListener("click", (event) => {
         console.log('Senha válida!');
 
     }
+    console.log(nomeCompleto.value)
 
+    fetch("http://localhost:3000/api/usuario",{
+        method: "POST",
+        headers:{
+            'accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+            nome: nomeCompleto.value,
+            nascimento : dataNascimento.value,
+            email : email.value,
+            senha : senha.value,
+            cpf : cpf.value,
+            telefone : telefone.value
+        })
+    }).then(
+        response => response.json()
+    ).then(
+        html => console.log(html)
+    )
     window.location.href = "login.html";
-    console.log(validaCPF(cpf.value))
+  
 
 });
 
