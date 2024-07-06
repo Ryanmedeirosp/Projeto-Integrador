@@ -106,16 +106,20 @@ botaoSalvar.addEventListener("click", (e)=>{
 
     if (email.value == ""){
         email.style.border = "3px solid red"
+        return
     }else if(!isEmailValid(email.value)){
         email.style.border = "3px solid red"
+        return
     }else{
         email.style.border = "none"
     } 
 
-    if (telefone.value == ""){
+    if (telefone.value > 14){
         telefone.style.border = "3px solid red"
+        return
     }else if(validarTelefone(telefone) ===   ''){
         telefone.style.border = "3px solid red"
+        return
     }else{
         telefone.style.border = "none"
     }  
