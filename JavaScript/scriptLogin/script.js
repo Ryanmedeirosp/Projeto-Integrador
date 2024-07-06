@@ -40,17 +40,14 @@ acessarConta.addEventListener("click",(e)=>{
     const senhaValue = senha.value;
 
     const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
-    if (!senhaRegex.test(senhaValue)) {
+    
+    if (senha.value == "" || !senhaRegex.test(senhaValue)) {
+        senha.style.border = " 3px solid red"
+        senha.placeholder = "Preencha sua senha"
         console.log('Senha inválida.')
         return
     }else{
         console.log('Senha válida!');
-    }
-
-    if (senha.value == "") {
-        senha.style.border = " 3px solid red"
-        senha.placeholder = "Preencha sua senha"
-        return
     }
 
     if (cpf.value.length < 11) {
