@@ -164,10 +164,20 @@ botao.addEventListener("click", (event) => {
         telefone.placeholder = ""
     }
 
-    if (senha.value == "") {
+    const senhaValue = senha.value;
+    const confirmarSenhaValue = confirmarSenha.value;
+    const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
+
+    if ((senha.value == "") || !senhaRegex.test(senhaValue)) {
         senha.style.border = " 3px solid red"
+        console.log('A senha deve ter no mínimo 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caracter especial.')
         senha.placeholder = "Preencha sua senha"
         return
+    }else if (senhaValue !== confirmarSenhaValue) {
+        console.log('As senhas não correspondem.');
+        return
+    }else{
+        console.log('Senha válida!');
     }
 
     if (confirmarSenha.value == "") {
@@ -182,19 +192,6 @@ botao.addEventListener("click", (event) => {
         return
     }
 
-    const senhaValue = senha.value;
-    const confirmarSenhaValue = confirmarSenha.value;
-
-    const senhaRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#¨])[A-Za-z\d@$!%*?&#¨]{8,}$/;
-    if (!senhaRegex.test(senhaValue)) {
-        console.log('A senha deve ter no mínimo 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caracter especial.')
-        return
-    }else if (senhaValue !== confirmarSenhaValue) {
-        console.log('As senhas não correspondem.');
-        return
-    } else{
-        console.log('Senha válida!');
-    }
 
     console.log(nomeCompleto.value)
 
