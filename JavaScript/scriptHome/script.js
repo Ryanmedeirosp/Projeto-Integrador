@@ -1,6 +1,6 @@
-const containerAcoes = document.querySelector("#containerAcoes")
-const containerBDRs = document.querySelector("#containerBDRs")
-const containerFund = document.querySelector("#containerFund")
+const containerAcoes = document.querySelector("#container-acoes")
+const containerBDRs = document.querySelector("#container-BDRs")
+const containerFund = document.querySelector("#container-fundos")
 
 window.onload = ()=>{
     buscarDados()

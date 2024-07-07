@@ -33,3 +33,21 @@ main {
     justify-content: center;
     flex: 1;
 }
+
+nav {
+    position: absolute;
+    right: 30px;
+}
+
+nav a {
+    padding: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: large;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}

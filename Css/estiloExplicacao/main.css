@@ -1,4 +1,4 @@
-#containerGeral {
+#container-geral {
     height: 900px;
     width: 1000px;
     display: flex;
@@ -7,35 +7,35 @@
     gap: 30px;
 }
 
-#divApresentacao {
+#div-apresentacao {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-#tituloApresentacao {
+#titulo-apresentacao {
     text-align: center;
 }
 
-#divAcoes {
+#div-acoes {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-#divFundos {
+#div-fundos {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-#divBDRS {
+#div-BDRS {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-#divDiferencas {
+#div-diferencas {
     display: flex;
     flex-direction: column;
     gap: 10px;

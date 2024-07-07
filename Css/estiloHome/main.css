@@ -1,4 +1,4 @@
-#containerGeral {
+#container-geral {
     width: 1400px;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-#tiposAcoes {
+#tipos-acoes {
     justify-content: center;
     display: flex;
     gap: 50px;
@@ -27,52 +27,13 @@
     margin-top: 10px;
 }
 
-#containerAcoes, #containerBDRs, #containerFund {
+#container-acoes, #container-BDRs, #container-fundos {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     height: 340px;
     overflow: auto;
     color: black;
-}
-
-#containerAcoes::-webkit-scrollbar {
-    width: 6px;
-    background: white;
-}
-
-#containerAcoes::-webkit-scrollbar-thumb {
-    background-color: black;
-}
-
-#containerAcoes::-webkit-scrollbar-track {
-    background-color: #D9D9D9;;
-}
-
-#containerBDRs::-webkit-scrollbar {
-    width: 6px;
-    background: white;
-}
-
-#containerBDRs::-webkit-scrollbar-thumb {
-    background-color: black;
-}
-
-#containerBDRs::-webkit-scrollbar-track {
-    background-color: #D9D9D9;;
-}
-
-#containerFund::-webkit-scrollbar {
-    width: 6px;
-    background: white;
-}
-
-#containerFund::-webkit-scrollbar-thumb {
-    background-color: black;
-}
-
-#containerFund::-webkit-scrollbar-track {
-    background-color: #D9D9D9;;
 }
 
 .divAcao {
@@ -82,25 +43,25 @@
     border-bottom: 2px solid black;
 }
 
-#containerAcoes h1 {
+#container-acoes h1 {
     margin-bottom: 25px;
 }
 
-#containerBDRs h1 {
+#container-BDRs h1 {
     margin-bottom: 25px;
 }
 
-#containerInfo {
+#container-info {
     display: flex;
     justify-content: center;
 }
 
-#containerInfo a {
+#container-info a {
     display: flex;
     color: black;
 }
 
-.videosYOUTUBE {
+.videos-youtube {
 
     display: flex;
     gap: 40px;
@@ -129,6 +90,41 @@
  
 }
 
-iframe{
-    border-radius: 10px;
+#container-acoes::-webkit-scrollbar {
+    width: 6px;
+    background: white;
+}
+
+#container-acoes::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+#container-acoes::-webkit-scrollbar-track {
+    background-color: #D9D9D9;;
+}
+
+#container-BDRs::-webkit-scrollbar {
+    width: 6px;
+    background: white;
+}
+
+#container-BDRs::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+#container-BDRs::-webkit-scrollbar-track {
+    background-color: #D9D9D9;;
+}
+
+#container-fundos::-webkit-scrollbar {
+    width: 6px;
+    background: white;
+}
+
+#container-fundos::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+#container-fundos::-webkit-scrollbar-track {
+    background-color: #D9D9D9;;
 }
