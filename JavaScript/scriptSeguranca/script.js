@@ -110,6 +110,10 @@ confirmarBtn.addEventListener("click", (event) =>{
     }else{
         confsenha.style.border = "2px solid #D9D9D9"
     }
+    toggleModal()
+    campoTextoErro.innerHTML = "Você alterou sua senha"
+
+
     fetch('http://localhost:3000/api/usuario/alterarSenha', {
         method: 'PATCH',
         headers:{
@@ -127,7 +131,10 @@ confirmarBtn.addEventListener("click", (event) =>{
         html =>{
             usuario.senha = JSON.stringify(html.result)
             localStorage.usuariosessao = JSON.stringify(usuario)
-            window.location.href = "../html/autenticacao.html"
+            setTimeout(() => {
+                window.location.href = "../html/autenticacao.html"
+            }, 4000);
+            
         } 
     );
 });
