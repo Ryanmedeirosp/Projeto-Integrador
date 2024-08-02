@@ -26,4 +26,4 @@ O design será responsivo, garantindo uma experiência otimizada em dispositivos
 
 ---
 
-Feito com ♥ by Ryan Medeiros, Junior e Dava
+Feito com ♥ by Ryan Medeiros, Junior e Davi
